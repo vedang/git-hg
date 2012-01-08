@@ -41,10 +41,17 @@ Either add `/path/to/this/checkout/bin` to your `$PATH`, or symbolic link
 - Checkout a new branch from hg:
 
         $ git-hg checkout branch_name
-        
+
 - Push changes back to hg, optionally to a specific destination:
 
 		$ git-hg push [destination]
+
+## Caveats ##
+
+- Cloning the hg repo will fail if it does not already have a master branch.
+The 'master' branch is the default branch for a git repository, but this is
+not the case with hg. Make sure that the mercurial repo you are trying to
+clone has a branch named 'master'.
 
 ## Structure ##
 
